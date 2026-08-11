@@ -1,0 +1,278 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorOnSurface" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Age"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Date Selectors -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of birth"
+                    android:textSize="18sp"
+                    android:textColor="#70757A" />
+                <TextView
+                    android:id="@+id/tvDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="16 Aug 2010"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#7F00FF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textSize="18sp"
+                    android:textColor="#70757A" />
+                <TextView
+                    android:id="@+id/tvToday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="31 Jan 2026"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#70757A" />
+            </RelativeLayout>
+
+            <!-- Age Result Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/backgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <!-- Age Section -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Age"
+                                android:textSize="48sp"
+                                android:textColor="#70757A" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/tvAgeYears"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15"
+                                    android:textSize="64sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#7F00FF" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="years"
+                                    android:textSize="18sp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:textColor="#70757A" />
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/tvAgeDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5 months | 15 days"
+                                android:textSize="14sp"
+                                android:textColor="#70757A" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#E0E0E0" />
+
+                        <!-- Next Birthday Section -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Next birthday"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#7F00FF" />
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginVertical="12dp"
+                                android:src="@android:drawable/ic_menu_today"
+                                app:tint="#7F00FF" />
+                            <TextView
+                                android:id="@+id/tvNextBirthdayDay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sunday"
+                                android:textSize="18sp"
+                                android:textColor="#70757A" />
+                            <TextView
+                                android:id="@+id/tvNextBirthdayCountdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:text="6 months | 16 days"
+                                android:textSize="14sp"
+                                android:textColor="#70757A" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <!-- Summary Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Summary"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#7F00FF"
+                            android:layout_marginBottom="16dp" />
+
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="3">
+
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Years" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumYears" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Months" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumMonths" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="185" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weeks" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumWeeks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="806" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Days" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumDays" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5647" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hours" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumHours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="135528" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                            <LinearLayout style="@style/AgeSummaryItem">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Minutes" style="@style/AgeSummaryLabel" />
+                                <TextView android:id="@+id/tvSumMinutes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8131680" style="@style/AgeSummaryValue" />
+                            </LinearLayout>
+                        </GridLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAddCalendar"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:text="Add to Calendar"
+            android:textSize="16sp"
+            android:textColor="#70757A"
+            android:background="?attr/backgroundColor"
+            style="@style/Widget.Material3.Button.TextButton" />
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:text="Share"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7F00FF"
+            style="@style/Widget.Material3.Button"
+            app:shapeAppearanceOverlay="@null" />
+    </LinearLayout>
+</LinearLayout>

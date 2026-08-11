@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CalculatorApp">
+
+        <!-- Real AdMob App ID -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3051165035564130~3719118960"/>
+
+        <!-- FileProvider for Sharing Screenshots -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".AgeCalculatorActivity" android:exported="false" />
+        <activity android:name=".AreaCalculatorActivity" android:exported="false" />
+        <activity android:name=".BmiCalculatorActivity" android:exported="false" />
+        <activity android:name=".BmiDetailsActivity" android:exported="false" />
+        <activity android:name=".DataCalculatorActivity" android:exported="false" />
+        <activity android:name=".DateCalculatorActivity" android:exported="false" />
+        <activity android:name=".DiscountCalculatorActivity" android:exported="false" />
+        <activity android:name=".LengthCalculatorActivity" android:exported="false" />
+        <activity android:name=".MassCalculatorActivity" android:exported="false" />
+        <activity android:name=".NumeralSystemActivity" android:exported="false" />
+        <activity android:name=".SpeedCalculatorActivity" android:exported="false" />
+        <activity android:name=".TemperatureCalculatorActivity" android:exported="false" />
+        <activity android:name=".TimeCalculatorActivity" android:exported="false" />
+        <activity android:name=".VolumeCalculatorActivity" android:exported="false" />
+
+        <activity android:name=".GstCalculatorActivity" android:exported="false" />
+        <activity android:name=".CurrencyCalculatorActivity" android:exported="false" />
+        <activity android:name=".InvestmentCalculatorActivity" android:exported="false" />
+        <activity android:name=".LoanCalculatorActivity" android:exported="false" />
+        <activity android:name=".ResultDetailsActivity" android:exported="false" />
+        <activity android:name=".StatsActivity" android:exported="false" />
+
+        <activity android:name=".InflationCalculatorActivity" android:exported="false" />
+        <activity android:name=".FdCalculatorActivity" android:exported="false" />
+        <activity android:name=".RdCalculatorActivity" android:exported="false" />
+        <activity android:name=".TaxCalculatorActivity" android:exported="false" />
+
+        <activity android:name=".AngleCalculatorActivity" android:exported="false" />
+        <activity android:name=".EnergyCalculatorActivity" android:exported="false" />
+        <activity android:name=".ForceCalculatorActivity" android:exported="false" />
+        <activity android:name=".FuelEfficiencyCalculatorActivity" android:exported="false" />
+        <activity android:name=".PowerCalculatorActivity" android:exported="false" />
+        <activity android:name=".PressureCalculatorActivity" android:exported="false" />
+        <activity android:name=".PercentageCalculatorActivity" android:exported="false" />
+        <activity android:name=".UnitPriceCalculatorActivity" android:exported="false" />
+        <activity android:name=".TipCalculatorActivity" android:exported="false" />
+
+        <activity android:name=".WorldClockActivity" android:exported="false" />
+        <activity android:name=".ConstantsActivity" android:exported="false" />
+        <activity android:name=".CapitalsActivity" android:exported="false" />
+
+        <!-- Batch 1 -->
+        <activity android:name=".TorqueCalculatorActivity" android:exported="false" />
+        <activity android:name=".FrequencyCalculatorActivity" android:exported="false" />
+        <activity android:name=".VolumeFlowCalculatorActivity" android:exported="false" />
+        <activity android:name=".CookingCalculatorActivity" android:exported="false" />
+        <activity android:name=".TransferRateCalculatorActivity" android:exported="false" />
+
+        <!-- Batch 2 -->
+        <activity android:name=".AccelerationCalculatorActivity" android:exported="false" />
+        <activity android:name=".SoundCalculatorActivity" android:exported="false" />
+        <activity android:name=".ElectricCurrentCalculatorActivity" android:exported="false" />
+        <activity android:name=".VoltageCalculatorActivity" android:exported="false" />
+        <activity android:name=".ResistanceCalculatorActivity" android:exported="false" />
+
+        <!-- Batch 3 -->
+        <activity android:name=".DensityCalculatorActivity" android:exported="false" />
+        <activity android:name=".IlluminanceCalculatorActivity" android:exported="false" />
+        <activity android:name=".RadiationCalculatorActivity" android:exported="false" />
+        <activity android:name=".ElectricChargeCalculatorActivity" android:exported="false" />
+        <activity android:name=".InductanceCalculatorActivity" android:exported="false" />
+
+    </application>
+
+</manifest>

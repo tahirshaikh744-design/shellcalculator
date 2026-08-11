@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:useDefaultMargins="true">
+
+        <!-- World Clock -->
+        <LinearLayout
+            android:id="@+id/btnUnitWorldClock"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_world_clock" />
+            <TextView style="@style/UnitTextStyle" android:text="World Clock" />
+        </LinearLayout>
+
+        <!-- Scientific Constants -->
+        <LinearLayout
+            android:id="@+id/btnUnitConstants"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_constants" />
+            <TextView style="@style/UnitTextStyle" android:text="Scientific Constants" />
+        </LinearLayout>
+
+        <!-- Country Capitals -->
+        <LinearLayout
+            android:id="@+id/btnUnitCapitals"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_capitals" />
+            <TextView style="@style/UnitTextStyle" android:text="Country Capitals" />
+        </LinearLayout>
+
+    </GridLayout>
+</ScrollView>

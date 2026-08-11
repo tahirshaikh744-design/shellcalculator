@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorOnSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Loan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Principal Amount Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Principal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#70757A" />
+            <TextView
+                android:id="@+id/tvLoanAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter amount"
+                android:paddingVertical="12dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#7F00FF"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="24dp"/>
+
+            <!-- Interest Rate Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interest (percentage)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#70757A" />
+            <TextView
+                android:id="@+id/tvInterestRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter annual rate"
+                android:paddingVertical="12dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="24dp"/>
+
+            <!-- Duration Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loan tenure"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#70757A" />
+            <LinearLayout
+                android:id="@+id/layoutDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <TextView
+                    android:id="@+id/tvDurationDisplay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0 year 0 month"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorOnSurface" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:rotation="-90"
+                    app:tint="#70757A" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="32dp"/>
+
+            <!-- Results Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/backgroundColor">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Monthly EMI" android:textColor="#70757A"/>
+                        <TextView android:id="@+id/tvResultEmi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="#7F00FF"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total Interest" android:textColor="#70757A"/>
+                        <TextView android:id="@+id/tvResultInterest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginVertical="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total Amount" android:textSize="18sp" android:textStyle="bold" android:textColor="?attr/colorOnSurface"/>
+                        <TextView android:id="@+id/tvResultTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="18sp" android:textStyle="bold" android:textColor="#7F00FF"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Calculate Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Calculate"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:backgroundTint="#7F00FF"
+                app:cornerRadius="32dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Keypad -->
+    <GridLayout
+        android:id="@+id/loanKeypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="8dp"
+        android:background="?attr/backgroundColor">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btn7" style="@style/KeypadBtn" android:text="7" />
+        <Button android:id="@+id/btn8" style="@style/KeypadBtn" android:text="8" />
+        <Button android:id="@+id/btn9" style="@style/KeypadBtn" android:text="9" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/KeypadBtnAction"
+            android:layout_rowSpan="2"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:text="AC"
+            android:textColor="#7F00FF" />
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btn4" style="@style/KeypadBtn" android:text="4" />
+        <Button android:id="@+id/btn5" style="@style/KeypadBtn" android:text="5" />
+        <Button android:id="@+id/btn6" style="@style/KeypadBtn" android:text="6" />
+
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn1" style="@style/KeypadBtn" android:text="1" />
+        <Button android:id="@+id/btn2" style="@style/KeypadBtn" android:text="2" />
+        <Button android:id="@+id/btn3" style="@style/KeypadBtn" android:text="3" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/KeypadBtnAction"
+            android:layout_rowSpan="2"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#7F00FF" />
+
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn0" style="@style/KeypadBtn" android:text="0" android:layout_columnSpan="2" android:layout_width="0dp" android:layout_columnWeight="2"/>
+        <Button android:id="@+id/btnDot" style="@style/KeypadBtn" android:text="." />
+
+    </GridLayout>
+
+</LinearLayout>

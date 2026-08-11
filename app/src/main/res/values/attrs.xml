@@ -1,0 +1,9 @@
+<resources>
+    <attr name="backgroundColor" format="color" />
+    <attr name="btnScientificColor" format="color" />
+    <attr name="btnNumberColor" format="color" />
+    <attr name="btnOperatorColor" format="color" />
+    <attr name="btnEqualColor" format="color" />
+    <attr name="textPrimaryColor" format="color" />
+    <attr name="textSecondaryColor" format="color" />
+</resources>

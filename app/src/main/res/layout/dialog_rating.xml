@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#1A70757A"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/btnCloseRating"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="?attr/colorOnSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:id="@+id/tvRatingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Rate Your Experience"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/tvRatingDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRatingTitle"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Enjoying the app? It only takes a second to help us grow by leaving a rating!"
+            android:textSize="15sp"
+            android:textColor="#70757A" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRatingDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:numStars="5"
+            android:stepSize="1"
+            android:progressTint="#FFD700"
+            android:secondaryProgressTint="#FFD700"
+            style="?android:attr/ratingBarStyle" />
+
+        <Button
+            android:id="@+id/btnRateNow"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="32dp"
+            android:text="Rate Now"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/violet"
+            android:textColor="@color/white"
+            app:cornerRadius="16dp"
+            style="@style/Widget.Material3.Button.TonalButton" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

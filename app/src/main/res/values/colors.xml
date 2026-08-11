@@ -1,0 +1,16 @@
+<resources>
+    <color name="bg_main">#F7F9FC</color>
+    <color name="text_primary">#1B1B1F</color>
+    <color name="text_secondary">#70757A</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="violet">#7F00FF</color>
+
+    <!-- Button Colors -->
+    <color name="btn_scientific">#E0E7F6</color>
+    <color name="btn_number">#E9EEF4</color>
+    <color name="btn_operator">#DDE2F9</color>
+    <color name="btn_equal">#6B5677</color>
+
+    <color name="text_ac">#4267B2</color>
+    <color name="white">#FFFFFF</color>
+</resources>

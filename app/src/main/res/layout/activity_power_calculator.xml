@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorOnSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Power"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:gravity="center_vertical">
+
+        <!-- Unit 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/tvUnit1Symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawablePadding="8dp"
+                app:drawableTint="#70757A"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/tvUnit1Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="#7F00FF"
+                android:gravity="end"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="48sp"
+                app:autoSizeStepGranularity="2sp"
+                android:maxLines="2"
+                android:paddingVertical="4dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/tvUnit1Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Watt"
+                android:textSize="12sp"
+                android:textColor="#70757A"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Unit 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUnit2Symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:drawablePadding="8dp"
+                app:drawableTint="#70757A"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/tvUnit2Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.0013"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurface"
+                android:gravity="end"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="48sp"
+                app:autoSizeStepGranularity="2sp"
+                android:maxLines="2"
+                android:paddingVertical="4dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/tvUnit2Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horsepower"
+                android:textSize="12sp"
+                android:textColor="#70757A"
+                android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginHorizontal="24dp" />
+
+    <!-- Custom Keypad -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="12dp">
+
+        <Button android:id="@+id/btn7" style="@style/KeypadBtn" android:text="7" />
+        <Button android:id="@+id/btn8" style="@style/KeypadBtn" android:text="8" />
+        <Button android:id="@+id/btn9" style="@style/KeypadBtn" android:text="9" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/KeypadBtnAction"
+            android:text="AC"
+            android:layout_rowSpan="2"
+            android:textColor="#7F00FF" />
+
+        <Button android:id="@+id/btn4" style="@style/KeypadBtn" android:text="4" />
+        <Button android:id="@+id/btn5" style="@style/KeypadBtn" android:text="5" />
+        <Button android:id="@+id/btn6" style="@style/KeypadBtn" android:text="6" />
+
+        <Button android:id="@+id/btn1" style="@style/KeypadBtn" android:text="1" />
+        <Button android:id="@+id/btn2" style="@style/KeypadBtn" android:text="2" />
+        <Button android:id="@+id/btn3" style="@style/KeypadBtn" android:text="3" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/KeypadBtnAction"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconGravity="textStart"
+            android:layout_rowSpan="2"
+            app:iconTint="#7F00FF" />
+
+        <Button android:id="@+id/btn0" style="@style/KeypadBtn" android:text="0" android:layout_columnSpan="2" android:layout_width="0dp" android:layout_columnWeight="2"/>
+        <Button android:id="@+id/btnDot" style="@style/KeypadBtn" android:text="." />
+
+    </GridLayout>
+
+</LinearLayout>

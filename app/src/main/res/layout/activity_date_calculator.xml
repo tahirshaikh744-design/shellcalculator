@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorOnSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Date"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- From Date -->
+            <RelativeLayout
+                android:id="@+id/btnFromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#70757A" />
+                <TextView
+                    android:id="@+id/tvFromDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="31 Jan 2026"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#7F00FF"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    app:drawableTint="#70757A" />
+            </RelativeLayout>
+
+            <!-- To Date -->
+            <RelativeLayout
+                android:id="@+id/btnToDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#70757A" />
+                <TextView
+                    android:id="@+id/tvToDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="31 Jan 2026"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#70757A"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    app:drawableTint="#70757A" />
+            </RelativeLayout>
+
+            <!-- Difference Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/backgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Difference"
+                        android:gravity="center"
+                        android:padding="24dp"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#7F00FF" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <!-- Using GridLayout here to match AgeSummaryItem style requirements -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:padding="16dp">
+
+                        <LinearLayout style="@style/AgeSummaryItem">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Years" style="@style/AgeSummaryLabel" />
+                            <TextView android:id="@+id/tvDiffYears" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/AgeSummaryValue" />
+                        </LinearLayout>
+                        <LinearLayout style="@style/AgeSummaryItem">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Months" style="@style/AgeSummaryLabel" />
+                            <TextView android:id="@+id/tvDiffMonths" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/AgeSummaryValue" />
+                        </LinearLayout>
+                        <LinearLayout style="@style/AgeSummaryItem">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Days" style="@style/AgeSummaryLabel" />
+                            <TextView android:id="@+id/tvDiffDays" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/AgeSummaryValue" />
+                        </LinearLayout>
+                    </GridLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="24dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="From"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="#7F00FF" />
+                            <TextView
+                                android:id="@+id/tvSummaryFrom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="31 Jan 2026"
+                                android:textSize="14sp"
+                                android:textColor="#70757A" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="To"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="#7F00FF" />
+                            <TextView
+                                android:id="@+id/tvSummaryTo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="31 Jan 2026"
+                                android:textSize="14sp"
+                                android:textColor="#70757A" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Powered by Shell Calculator"
+                        android:gravity="center"
+                        android:paddingBottom="16dp"
+                        android:textSize="10sp"
+                        android:textColor="#70757A" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Share"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7F00FF"
+        style="@style/Widget.Material3.Button"
+        app:shapeAppearanceOverlay="@null" />
+
+</LinearLayout>

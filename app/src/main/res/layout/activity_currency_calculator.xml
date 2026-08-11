@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundColor">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorOnSurface"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Currency"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Currency 1 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+                <TextView
+                    android:id="@+id/tvUnit1Symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INR"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    app:drawableTint="#70757A"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/tvUnit1Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="#7F00FF"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"/>
+                    <TextView
+                        android:id="@+id/tvUnit1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indian rupee"
+                        android:textSize="12sp"
+                        android:textColor="#70757A" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Currency 2 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp">
+                <TextView
+                    android:id="@+id/tvUnit2Symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    app:drawableTint="#70757A"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/tvUnit2Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0109"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnSurface"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"/>
+                    <TextView
+                        android:id="@+id/tvUnit2Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="United States dollar"
+                        android:textSize="12sp"
+                        android:textColor="#70757A" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Currency 3 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:id="@+id/tvUnit3Symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EUR"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawablePadding="8dp"
+                    app:drawableTint="#70757A"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/tvUnit3Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0092"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="?attr/colorOnSurface"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"/>
+                    <TextView
+                        android:id="@+id/tvUnit3Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Euro"
+                        android:textSize="12sp"
+                        android:textColor="#70757A" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Refresh Button Only -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp">
+                <ImageView
+                    android:id="@+id/btnRefreshRates"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="8dp"
+                    android:src="@android:drawable/ic_menu_rotate"
+                    app:tint="#7F00FF"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginHorizontal="24dp" />
+
+    <!-- Keypad -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:padding="16dp">
+
+        <Button android:id="@+id/btn7" style="@style/KeypadBtn" android:text="7" />
+        <Button android:id="@+id/btn8" style="@style/KeypadBtn" android:text="8" />
+        <Button android:id="@+id/btn9" style="@style/KeypadBtn" android:text="9" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/KeypadBtnAction"
+            android:text="AC"
+            android:layout_rowSpan="2"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:textColor="#7F00FF" />
+
+        <Button android:id="@+id/btn4" style="@style/KeypadBtn" android:text="4" />
+        <Button android:id="@+id/btn5" style="@style/KeypadBtn" android:text="5" />
+        <Button android:id="@+id/btn6" style="@style/KeypadBtn" android:text="6" />
+
+        <Button android:id="@+id/btn1" style="@style/KeypadBtn" android:text="1" />
+        <Button android:id="@+id/btn2" style="@style/KeypadBtn" android:text="2" />
+        <Button android:id="@+id/btn3" style="@style/KeypadBtn" android:text="3" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/KeypadBtnAction"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconGravity="textStart"
+            android:layout_rowSpan="2"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:iconPadding="0dp"
+            app:iconTint="#7F00FF" />
+
+        <Button android:id="@+id/btn0" style="@style/KeypadBtn" android:text="0" android:layout_columnSpan="2" android:layout_width="0dp" android:layout_columnWeight="2"/>
+        <Button android:id="@+id/btnDot" style="@style/KeypadBtn" android:text="." />
+
+    </GridLayout>
+
+</LinearLayout>

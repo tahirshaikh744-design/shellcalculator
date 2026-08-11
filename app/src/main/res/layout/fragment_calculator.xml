@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCalculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- 1. Display Area: Balanced for huge text without clipping -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="16dp"
+        android:gravity="bottom|end">
+
+        <!-- Input Formula (Bold & Clear) -->
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="0"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:maxLines="2"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeMaxTextSize="45sp" />
+
+        <!-- Live Result (Massive & Violet) -->
+        <TextView
+            android:id="@+id/tvFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="65sp"
+            android:textStyle="bold"
+            android:textColor="#B07F00FF"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:layout_marginTop="8dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="24sp"
+            app:autoSizeMaxTextSize="65sp" />
+    </LinearLayout>
+
+    <!-- 2. Keypad Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Static Toggle Arrow -->
+        <LinearLayout
+            android:id="@+id/layoutToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/imgToggle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="?attr/colorOnSurface"
+                android:alpha="0.5"
+                android:rotation="180"/>
+        </LinearLayout>
+
+        <!-- Scientific Grid -->
+        <GridLayout
+            android:id="@+id/scientificGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:paddingHorizontal="8dp"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSqrt" style="@style/ScientificBtn" android:text="√" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPi" style="@style/ScientificBtn" android:text="π" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPower" style="@style/ScientificBtn" android:text="^" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFact" style="@style/ScientificBtn" android:text="!" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRad" style="@style/ScientificBtn" android:text="Rad" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSin" style="@style/ScientificBtn" android:text="sin" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCos" style="@style/ScientificBtn" android:text="cos" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTan" style="@style/ScientificBtn" android:text="tan" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInv" style="@style/ScientificBtn" android:text="Inv" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnE" style="@style/ScientificBtn" android:text="e" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLn" style="@style/ScientificBtn" android:text="ln" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLog" style="@style/ScientificBtn" android:text="log" />
+        </GridLayout>
+
+        <!-- Main Grid -->
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClear" style="@style/ScientificBtn" android:text="AC" android:textColor="@color/text_ac"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBrackets" style="@style/ScientificBtn" android:text="( )" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPercent" style="@style/ScientificBtn" android:text="%" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDivide" style="@style/OperatorBtn" android:text="÷" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7" style="@style/NumberBtn" android:text="7" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8" style="@style/NumberBtn" android:text="8" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9" style="@style/NumberBtn" android:text="9" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMultiply" style="@style/OperatorBtn" android:text="×" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4" style="@style/NumberBtn" android:text="4" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5" style="@style/NumberBtn" android:text="5" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6" style="@style/NumberBtn" android:text="6" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMinus" style="@style/OperatorBtn" android:text="−" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1" style="@style/NumberBtn" android:text="1" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2" style="@style/NumberBtn" android:text="2" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3" style="@style/NumberBtn" android:text="3" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlus" style="@style/OperatorBtn" android:text="+" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0" style="@style/NumberBtn" android:text="0" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDot" style="@style/NumberBtn" android:text="." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="@style/NumberBtn"
+                app:icon="@android:drawable/ic_input_delete"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                app:iconPadding="0dp"
+                android:padding="0dp"
+                android:text=""/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEqual" style="@style/EqualBtn" android:text="=" />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

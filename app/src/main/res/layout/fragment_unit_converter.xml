@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+
+    <!-- Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        app:startIconTint="#70757A"
+        app:hintEnabled="false"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.Pill">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchConverter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search converters"
+            android:inputType="text"
+            android:paddingVertical="12dp"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <GridLayout
+            android:id="@+id/converterGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="8dp"
+            android:useDefaultMargins="true">
+
+            <!-- Age -->
+            <LinearLayout android:id="@+id/btnUnitAge" style="@style/UnitItemStyle" android:tag="age">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_age" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Age" />
+            </LinearLayout>
+
+            <!-- Area -->
+            <LinearLayout android:id="@+id/btnUnitArea" style="@style/UnitItemStyle" android:tag="area">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_area" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Area" />
+            </LinearLayout>
+
+            <!-- BMI -->
+            <LinearLayout android:id="@+id/btnUnitBmi" style="@style/UnitItemStyle" android:tag="bmi">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_bmi" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="BMI" />
+            </LinearLayout>
+
+            <!-- Data -->
+            <LinearLayout android:id="@+id/btnUnitData" style="@style/UnitItemStyle" android:tag="data">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_data" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Data" />
+            </LinearLayout>
+
+            <!-- Date -->
+            <LinearLayout android:id="@+id/btnUnitDate" style="@style/UnitItemStyle" android:tag="date">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_date" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Date" />
+            </LinearLayout>
+
+            <!-- Discount -->
+            <LinearLayout android:id="@+id/btnUnitDiscount" style="@style/UnitItemStyle" android:tag="discount">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_discount" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Discount" />
+            </LinearLayout>
+
+            <!-- Length -->
+            <LinearLayout android:id="@+id/btnUnitLength" style="@style/UnitItemStyle" android:tag="length">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_length" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Length" />
+            </LinearLayout>
+
+            <!-- Mass -->
+            <LinearLayout android:id="@+id/btnUnitMass" style="@style/UnitItemStyle" android:tag="mass">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_mass" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Mass" />
+            </LinearLayout>
+
+            <!-- Numeral System -->
+            <LinearLayout android:id="@+id/btnUnitNumeral" style="@style/UnitItemStyle" android:tag="numeral">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_numeral" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Numeral system" />
+            </LinearLayout>
+
+            <!-- Speed -->
+            <LinearLayout android:id="@+id/btnUnitSpeed" style="@style/UnitItemStyle" android:tag="speed">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_speed" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Speed" />
+            </LinearLayout>
+
+            <!-- Temperature -->
+            <LinearLayout android:id="@+id/btnUnitTemperature" style="@style/UnitItemStyle" android:tag="temperature">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_temperature" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Temperature" />
+            </LinearLayout>
+
+            <!-- Time -->
+            <LinearLayout android:id="@+id/btnUnitTime" style="@style/UnitItemStyle" android:tag="time">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_time" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Time" />
+            </LinearLayout>
+
+            <!-- Volume -->
+            <LinearLayout android:id="@+id/btnUnitVolume" style="@style/UnitItemStyle" android:tag="volume">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_volume" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Volume" />
+            </LinearLayout>
+
+            <!-- New Units -->
+            <LinearLayout android:id="@+id/btnUnitAngle" style="@style/UnitItemStyle" android:tag="angle">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_angle" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Angle" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitEnergy" style="@style/UnitItemStyle" android:tag="energy">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_energy" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Energy" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitForce" style="@style/UnitItemStyle" android:tag="force">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_force" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Force" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitFuel" style="@style/UnitItemStyle" android:tag="fuel">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_fuel" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Fuel" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitPower" style="@style/UnitItemStyle" android:tag="power">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_power" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Power" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitPressure" style="@style/UnitItemStyle" android:tag="pressure">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_pressure" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Pressure" />
+            </LinearLayout>
+
+            <!-- Daily Utilities -->
+            <LinearLayout android:id="@+id/btnUnitPercentage" style="@style/UnitItemStyle" android:tag="percentage">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_percentage" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Percentage" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitPrice" style="@style/UnitItemStyle" android:tag="unit price">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_unitprice" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Unit price" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnUnitTip" style="@style/UnitItemStyle" android:tag="tip">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_tip" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Tip" />
+            </LinearLayout>
+
+            <!-- Batch 1 -->
+            <LinearLayout android:id="@+id/btnUnitTorque" style="@style/UnitItemStyle" android:tag="torque">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_torque" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Torque" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitFrequency" style="@style/UnitItemStyle" android:tag="frequency">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_frequency" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Frequency" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitVolumeFlow" style="@style/UnitItemStyle" android:tag="volume flow">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_volume_flow" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Volume Flow" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitCooking" style="@style/UnitItemStyle" android:tag="cooking">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_cooking" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Cooking" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitTransferRate" style="@style/UnitItemStyle" android:tag="transfer rate">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_transfer_rate" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Transfer Rate" />
+            </LinearLayout>
+
+            <!-- Batch 2 -->
+            <LinearLayout android:id="@+id/btnUnitAcceleration" style="@style/UnitItemStyle" android:tag="acceleration">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_acceleration" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Acceleration" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitSound" style="@style/UnitItemStyle" android:tag="sound">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_sound" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Sound" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitCurrent" style="@style/UnitItemStyle" android:tag="electric current">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_current" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Electric Current" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitVoltage" style="@style/UnitItemStyle" android:tag="voltage">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_voltage" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Voltage" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitResistance" style="@style/UnitItemStyle" android:tag="resistance">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_resistance" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Resistance" />
+            </LinearLayout>
+
+            <!-- Batch 3 -->
+            <LinearLayout android:id="@+id/btnUnitDensity" style="@style/UnitItemStyle" android:tag="density">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_density" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Density" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitIlluminance" style="@style/UnitItemStyle" android:tag="illuminance">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_illuminance" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Illuminance" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitRadiation" style="@style/UnitItemStyle" android:tag="radiation">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_radiation" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Radiation" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitCharge" style="@style/UnitItemStyle" android:tag="electric charge">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_charge" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Electric Charge" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnUnitInductance" style="@style/UnitItemStyle" android:tag="inductance">
+                <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_unit_inductance" android:tint="@null" />
+                <TextView style="@style/UnitTextStyle" android:text="Inductance" />
+            </LinearLayout>
+
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>

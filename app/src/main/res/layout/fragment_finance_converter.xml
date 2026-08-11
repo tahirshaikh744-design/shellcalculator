@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:useDefaultMargins="true">
+
+        <!-- GST -->
+        <LinearLayout
+            android:id="@+id/btnUnitGst"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_gst" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="GST" />
+        </LinearLayout>
+
+        <!-- Currency -->
+        <LinearLayout
+            android:id="@+id/btnUnitCurrency"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_currency" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="Currency" />
+        </LinearLayout>
+
+        <!-- Investment -->
+        <LinearLayout
+            android:id="@+id/btnUnitInvestment"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_investment" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="Investment" />
+        </LinearLayout>
+
+        <!-- Loan -->
+        <LinearLayout
+            android:id="@+id/btnUnitLoan"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_loans" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="Loan" />
+        </LinearLayout>
+
+        <!-- Inflation -->
+        <LinearLayout
+            android:id="@+id/btnUnitInflation"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_inflation" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="Inflation" />
+        </LinearLayout>
+
+        <!-- FD Calculator -->
+        <LinearLayout
+            android:id="@+id/btnUnitFD"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_fd" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="FD" />
+        </LinearLayout>
+
+        <!-- RD Calculator -->
+        <LinearLayout
+            android:id="@+id/btnUnitRD"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_rd" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="RD" />
+        </LinearLayout>
+
+        <!-- Income Tax -->
+        <LinearLayout
+            android:id="@+id/btnUnitTax"
+            style="@style/UnitItemStyle">
+            <ImageView style="@style/UnitIconStyle" android:src="@drawable/ic_finance_tax" android:tint="@null" />
+            <TextView style="@style/UnitTextStyle" android:text="Income Tax" />
+        </LinearLayout>
+
+    </GridLayout>
+</ScrollView>

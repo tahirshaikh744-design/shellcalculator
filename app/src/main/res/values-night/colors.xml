@@ -1,0 +1,17 @@
+<resources>
+    <!-- Dark Mode Background (AMOLED Style) -->
+    <color name="bg_main">#000000</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="divider">#1C1C1E</color>
+
+    <!-- Dark Mode Button Palette -->
+    <color name="btn_scientific">#1C1C1E</color>
+    <color name="btn_number">#121212</color>
+    <color name="btn_operator">#2C2C2E</color>
+    <color name="btn_equal">#BB86FC</color>
+
+    <color name="text_ac">#BB86FC</color>
+    <color name="white">#000000</color>
+</resources>
